@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Party Time!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+  <div class="topnav">
+        <h1> <i class="fas fa-cat fa-flip-horizontal"></i> Party Time! <i class="fas fa-cat"></i></h1>
+  </div>
+  
+  <div class="content">
+    <div class="custom-select" style="width:200px;" >
+      <select id="element1" onchange="updateElement(this)"></select>
+        <option value="1">Color Mode 1</option>
+        <option value="2">Color Mode 2</option>
+        <option value="3">Color Mode 3</option>
+        <option value="4">Color Mode 4</option>
+        <option value="5">Color Mode 5</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label for="inputColor1">Color #1 : </label>
+      <input type="color" name="inputColor1" onchange="updateElement(this)" id="element2" value="#0000ff">     
+      <label for="inputColor2">Color #2 : </label>
+      <input type="color" name="inputColor2" onchange="updateElement(this)" id="element3" value="#0000ff">
+    </div>
+      <br> 
+      Background Color Enable:
+      <br><br> 
+      <label class="switch switch-toggle">
+      <input class="switch-input" type="checkbox"  onchange="updateElement(this)" id="element4" value="off"/>
+      <span class="switch-label" data-on="On" data-off="Off"></span> 
+      <span class="switch-handle"></span> 
+      </label>
+      <label for="inputColor3">Background Color : </label>
+      <input type="color" name="inputColor3" onchange="updateElement(this)" id="element5" value="#0000ff">
+     <div class="card-grid">
+      <div class="card">
+          <p class="card-title">Fader 1</p>
+          <p class="switch">
+              <input type="range" onchange="updateElement(this)" id="element6" min="0" max="100" step="1" value ="0" class="slider">
+          </p>
+          <br> 
+      </div>
+      <div class="card">
+          <p class="card-title"> Fader 2</p>
+          <p class="switch">
+              <input type="range" onchange="updateElement(this)" id="element7" min="0" max="5" step="1" value ="3" class="slider">
+          </p>
+          <br> 
+      </div>
+    </div>
+    Display Text : <input type="text" name="inputString" maxlength="240">
+    <input type="submit" value="LET IT BE LIT!!">
+    <br><br> 
+    Disco Enable: 
+    <br><br> 
+    <label class="switch switch-toggle">
+      <input class="switch-input" type="checkbox" onchange="updateElement(this)"id="element8" value="off"/>
+      <span class="switch-label" data-on="On" data-off="Off"></span> 
+      <span class="switch-handle"></span> 
+    </label>
+    <br>
+  <script src="script.js"></script>
+</body>
+</html>
